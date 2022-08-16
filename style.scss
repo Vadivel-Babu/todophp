@@ -1,0 +1,96 @@
+*,::after,::before{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.todo{
+    display: flex;
+    max-width: 20rem;
+    width: 40%;
+    min-width: 10rem;
+    background-color: rgb(255, 166, 0);
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    gap: 1rem;
+    margin: 1rem auto;
+    .add{
+        cursor: pointer;
+        padding: 0.2rem 0.8rem;
+        text-transform: capitalize;
+        border: 0;
+        background-color: black;
+        color: white;
+        font-weight: bold;
+           border-radius: 0.5rem;
+    }
+    input[type='text']{
+        border: 0;
+        padding: 0.3rem;
+        &:focus{
+            outline: none;
+        }
+    }
+}
+.todolist{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 30%;
+    margin: 1rem auto;
+    
+    padding: 1rem;
+    border-radius: 0.5rem;
+    min-height: 0;
+    .item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        
+        width: 100%;
+        background-color: rgb(247, 181, 0);
+        padding: 1rem;
+        border-radius: 0.5rem;
+
+        .check{
+            cursor: pointer;
+            width: 100%;
+            &.checked{
+                opacity: 0.5;
+                text-decoration: line-through;
+            }
+        }
+        .btn{
+            display: flex;
+            width: 50%;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+         
+
+            button{
+                cursor: pointer;
+                padding: 0.2rem 0.8rem;
+                text-transform: capitalize;
+                border: 0;
+                font-weight: bold;
+                color: white;
+                border-radius: 0.5rem;
+                &.delete{
+                    background-color: rgb(255, 98, 98);
+                }
+                &.edit{
+                    background-color: green;
+                }
+            }
+        }
+    }
+}
